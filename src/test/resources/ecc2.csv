@@ -1,0 +1,11 @@
+Test Case ID,Description,numCourses,Prerequisites,Expected Output
+TC001,numCourses = 0 and empty prerequisites,0,[],IllegalArgumentException
+TC002,Prerequisites is null,2,null,IllegalArgumentException
+TC003,Prerequisites contains out-of-range index,2000,"[[-1,0]]",IllegalArgumentException
+TC004,numCourses is empty,empty,"[[0,1]]",IllegalArgumentException
+TC005,Prerequisites contains duplicate pairs,3,"[[0,1], [0,1]]",IllegalArgumentException
+TC006,Self-loop exists (course depends on itself),2,"[[0,0]]",IllegalArgumentException
+TC007,Prerequisites index greater than numCourses-1,2000,"[[2002,1]]",IllegalArgumentException
+TC008,Valid input with no cycle,2,"[[0,1]]","[1, 0]"
+TC009,Valid input with only one course and empty prerequisites,1,[],[0]
+TC010,Cycle exists in prerequisites,3,"[[0,1], [1,2], [2,0]]",IllegalArgumentException

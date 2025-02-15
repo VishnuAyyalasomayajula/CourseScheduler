@@ -1,0 +1,6 @@
+Test Case ID,Description,numCourses,Prerequisites,Expected Output
+TC011,numCourses greater than 2000 with valid pairs,2025,"[[1,0], [1980, 1000]]",IllegalArgumentException
+TC012,numCourses between 1 and 2000 with cyclic prerequisites,1000,"[[50,100], [100,75], [100,50]]",IllegalArgumentException
+TC013,numCourses less than 1 with invalid pairs,-1,"[[-1,0], [1,0]]",IllegalArgumentException
+TC014,numCourses between 1 and 2000 with tree-like prerequisites,4,"[[1,0],[2,0],[3,1]]","[0, 1, 2, 3]"
+TC015,numCourses between 1 and 2000 with acyclic prerequisites,4,"[[1,0],[2,0],[3,0],[3,1]]","[0, 1, 2, 3]"
